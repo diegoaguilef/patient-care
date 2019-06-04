@@ -1,0 +1,29 @@
+@startuml
+annotation java.lang.Override
+annotation java.lang.SuppressWarnings
+class com.sun.glass.events.KeyEvent
+class java.util.ArrayList
+class java.util.Calendar
+class javax.swing.JComboBox
+class javax.swing.JFrame
+class javax.swing.JOptionPane
+class patient.care.Box
+class patient.care.BoxDAO
+class patient.care.Date
+class patient.care.Doctor
+class patient.care.DoctorDAO
+class patient.care.Patient
+class patient.care.PatientCare
+class patient.care.PatientDAO
+class patient.care.PatientsForm
+class patient.care.Person
+patient.care.Box ..> java.lang.Override
+patient.care.Date ..> java.lang.Override
+patient.care.Doctor ..> java.lang.Override
+patient.care.Doctor --|> patient.care.Person
+patient.care.Patient ..> java.lang.Override
+patient.care.Patient --|> patient.care.Person
+patient.care.PatientsForm ..> java.lang.SuppressWarnings
+patient.care.PatientsForm --|> javax.swing.JFrame
+patient.care.Person ..> java.lang.Override
+@enduml
